@@ -1,0 +1,176 @@
+{
+    "profile": {
+        "name": "Faisal Akhtar",
+        "role": "Senior Software Engineer",
+        "brand_subtitle": "Software Engineer — PHP · Laravel · AWS · Stripe",
+        "avatar_letter": "F",
+        "hero_badge": "Available for freelance work",
+        "hero_heading_before": "Building",
+        "hero_heading_highlight": "Scalable Apps",
+        "hero_heading_after": "& Secure Integrations",
+        "hero_description": "I specialize in PHP/Laravel, Shopify, Stripe payments, AWS infrastructure, WordPress, ERP/CRM systems, and Linux IoT devices.",
+        "cta_primary": "Get In Touch",
+        "cta_secondary": "View Projects",
+        "cv_link": "",
+        "location": "Available Worldwide (Remote)",
+        "availability": "Open for freelance & contract work",
+        "about_label": "About Me",
+        "about_heading": "What I Do",
+        "about_description": "Delivering end-to-end solutions from backend architecture to deployment and everything in between.",
+        "skills_label": "Skills & Tools",
+        "skills_heading": "My Tech Stack",
+        "skills_description": "Technologies and tools I use to build high-quality software.",
+        "projects_label": "Portfolio",
+        "projects_heading": "Featured Projects",
+        "projects_description": "A selection of real-world projects I've built and deployed.",
+        "contact_label": "Get In Touch",
+        "contact_heading": "Let's Work Together",
+        "contact_description": "Have a project in mind? Drop me a message and let's discuss how I can help."
+    },
+    "projects": [
+        {
+            "name": "Remelt Global",
+            "type": "WordPress",
+            "icon": "fas fa-globe",
+            "desc": "Professional WordPress website built with custom theme, responsive design, and optimized performance for a global business.",
+            "tags": "WordPress, Custom Theme, SEO",
+            "url": "https://remeltglobal.com/"
+        },
+        {
+            "name": "Evenement.pk",
+            "type": "WordPress",
+            "icon": "fas fa-calendar-alt",
+            "desc": "Event management platform built on WordPress with custom post types, booking features, and dynamic event listings.",
+            "tags": "WordPress, Events, Custom CPT",
+            "url": "https://evenement.pk/"
+        },
+        {
+            "name": "Xevta",
+            "type": "WordPress",
+            "icon": "fas fa-laptop-code",
+            "desc": "Technology company website with modern design, service showcases, and lead generation features built on WordPress.",
+            "tags": "WordPress, Business, Lead Gen",
+            "url": "https://xevta.com/"
+        },
+        {
+            "name": "Students Resource",
+            "type": "Laravel",
+            "icon": "fas fa-graduation-cap",
+            "desc": "Educational platform built with Laravel featuring student portals, resource management, and structured learning paths.",
+            "tags": "Laravel, Education, Portal",
+            "url": "https://studentsresource.net/"
+        },
+        {
+            "name": "Laravel SaaS Platform (ERP/CRM)",
+            "type": "Laravel",
+            "icon": "fas fa-building",
+            "desc": "Multi-tenant ERP + CRM system with role-based access control, Stripe payments, and AWS CI/CD deployment pipelines.",
+            "tags": "Laravel, SaaS, Stripe, AWS",
+            "url": ""
+        },
+        {
+            "name": "IoT Automation System",
+            "type": "IoT",
+            "icon": "fas fa-network-wired",
+            "desc": "Remote management tools and automated data sync from Moxa & Raspberry Pi field devices with real-time monitoring.",
+            "tags": "Moxa, Raspberry Pi, Linux",
+            "url": ""
+        }
+    ],
+    "skills": [
+        {
+            "name": "Laravel / PHP",
+            "icon": "fab fa-laravel",
+            "color": "#8b5cf6",
+            "desc": "Backend, APIs, SaaS"
+        },
+        {
+            "name": "Shopify",
+            "icon": "fab fa-shopify",
+            "color": "#3b82f6",
+            "desc": "Themes, Apps, Liquid"
+        },
+        {
+            "name": "Stripe",
+            "icon": "fab fa-stripe-s",
+            "color": "#6366f1",
+            "desc": "Payments, Subscriptions"
+        },
+        {
+            "name": "AWS",
+            "icon": "fab fa-aws",
+            "color": "#fb923c",
+            "desc": "EC2, S3, RDS, CI/CD"
+        },
+        {
+            "name": "WordPress",
+            "icon": "fab fa-wordpress",
+            "color": "#3b82f6",
+            "desc": "Themes, Plugins, CMS"
+        },
+        {
+            "name": "Tailwind CSS",
+            "icon": "fas fa-wind",
+            "color": "#06b6d4",
+            "desc": "UI Design, Responsive"
+        },
+        {
+            "name": "MySQL / PostgreSQL",
+            "icon": "fas fa-database",
+            "color": "#22c55e",
+            "desc": "Database Design"
+        },
+        {
+            "name": "IoT / Linux",
+            "icon": "fas fa-microchip",
+            "color": "#f43f5e",
+            "desc": "Moxa, Raspberry Pi"
+        }
+    ],
+    "about": [
+        {
+            "name": "Full-Stack Development",
+            "icon": "fas fa-code",
+            "color": "#8b5cf6",
+            "desc": "Building robust web applications with PHP/Laravel, clean REST APIs, and modern frontend frameworks with Tailwind CSS."
+        },
+        {
+            "name": "Payment Integrations",
+            "icon": "fas fa-credit-card",
+            "color": "#3b82f6",
+            "desc": "Stripe checkout flows, subscription billing, webhooks, and secure payment processing for global clients."
+        },
+        {
+            "name": "Cloud & DevOps",
+            "icon": "fas fa-cloud",
+            "color": "#06b6d4",
+            "desc": "AWS EC2, S3, RDS deployments with CI/CD pipelines, Linux server management, and scalable infrastructure."
+        },
+        {
+            "name": "E-Commerce & Shopify",
+            "icon": "fas fa-store",
+            "color": "#22c55e",
+            "desc": "Custom Shopify themes, app development, store setup, and headless commerce solutions for online businesses."
+        }
+    ],
+    "stats": {
+        "experience": "5+",
+        "projects": "30+",
+        "clients": "15+"
+    },
+    "seo": {
+        "site_title": "Faisal Akhtar — Software Engineer | PHP, Laravel, Shopify, AWS Expert",
+        "meta_description": "Faisal Akhtar is a Senior Software Engineer specializing in PHP, Laravel, Shopify, Stripe integrations, AWS EC2/S3, WordPress, ERP/CRM systems, Tailwind CSS, and IoT devices (Moxa, Raspberry Pi). Available for freelance and contract work.",
+        "meta_keywords": "Faisal Akhtar, Software Engineer, PHP Developer, Laravel Developer, Shopify Expert, Stripe Integration, AWS EC2, WordPress Developer, ERP CRM, Tailwind CSS, IoT Developer, Moxa, Raspberry Pi, Full Stack Developer, Freelance Developer, Web Developer Pakistan",
+        "og_title": "Faisal Akhtar — Software Engineer | PHP, Laravel, Shopify, AWS",
+        "og_description": "Senior Software Engineer specializing in PHP/Laravel, Shopify, Stripe, AWS, WordPress, and ERP/CRM systems. Building scalable applications and secure integrations.",
+        "twitter_title": "Faisal Akhtar — Software Engineer | PHP, Laravel, Shopify, AWS",
+        "twitter_description": "Senior Software Engineer specializing in PHP/Laravel, Shopify, Stripe, AWS, WordPress, and ERP/CRM systems. Available for freelance work.",
+        "canonical_url": "https://fai-box.online/",
+        "author": "Faisal Akhtar",
+        "job_title": "Senior Software Engineer",
+        "github_url": "https://github.com/faisalakhtar",
+        "linkedin_url": "",
+        "email": "faisalakhtar336@gmail.com"
+    }
+}
