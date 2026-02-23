@@ -576,19 +576,31 @@ function e(string $s): string {
 
     /* ─── FOOTER ─── */
     footer {
-      background: var(--white);
-      padding: 48px 0; text-align: center;
+      background: #0f172a;
+      padding: 24px 0;
     }
-    .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 18px; }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .footer-brand {
+      display: flex; align-items: center; gap: 10px; text-decoration: none;
+    }
+    .footer-brand .logo {
+      width: 32px; height: 32px; border-radius: 9px; font-size: 14px;
+      box-shadow: none;
+    }
+    .footer-brand-name { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); }
+    .footer-links { display: flex; align-items: center; gap: 6px; }
     .footer-links a {
-      color: rgba(255,255,255,0.5); font-size: 18px; text-decoration: none;
-      width: 42px; height: 42px; border-radius: 12px;
+      color: rgba(255,255,255,0.4); font-size: 16px; text-decoration: none;
+      width: 34px; height: 34px; border-radius: 9px;
       display: grid; place-items: center;
-      background: rgba(255,255,255,0.06);
-      transition: all 0.25s;
+      background: rgba(255,255,255,0.05);
+      transition: all 0.2s;
     }
-    .footer-links a:hover { color: #fff; background: rgba(255,255,255,0.12); transform: translateY(-2px); }
-    .footer-copy { font-size: 14px; color: rgba(255,255,255,0.4); }
+    .footer-links a:hover { color: #fff; background: rgba(255,255,255,0.1); transform: translateY(-1px); }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.3); }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 960px) {
@@ -624,6 +636,9 @@ function e(string $s): string {
       .card-btns { flex-direction: column; }
       .hero-stats { flex-direction: column; gap: 16px; }
       .about-card, .contact-form { padding: 24px; }
+    }
+    @media (max-width: 560px) {
+      .footer-inner { flex-direction: column; align-items: center; gap: 12px; text-align: center; }
     }
   </style>
 </head>
@@ -851,18 +866,24 @@ function e(string $s): string {
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <div class="footer-links">
-        <?php if (!empty($seo['github_url'])): ?>
-          <a href="<?= e($seo['github_url']) ?>" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-        <?php endif; ?>
-        <?php if (!empty($seo['linkedin_url'])): ?>
-          <a href="<?= e($seo['linkedin_url']) ?>" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-        <?php endif; ?>
-        <?php if (!empty($seo['email'])): ?>
-          <a href="mailto:<?= e($seo['email']) ?>"><i class="fas fa-envelope"></i></a>
-        <?php endif; ?>
+      <div class="footer-inner">
+        <a href="#" class="footer-brand">
+          <div class="logo"><?= e($profile['avatar_letter']) ?></div>
+          <span class="footer-brand-name"><?= e($profile['name']) ?></span>
+        </a>
+        <div class="footer-copy">&copy; <?= date('Y') ?> <?= e($seo['author']) ?>. All rights reserved.</div>
+        <div class="footer-links">
+          <?php if (!empty($seo['github_url'])): ?>
+            <a href="<?= e($seo['github_url']) ?>" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+          <?php endif; ?>
+          <?php if (!empty($seo['linkedin_url'])): ?>
+            <a href="<?= e($seo['linkedin_url']) ?>" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <?php endif; ?>
+          <?php if (!empty($seo['email'])): ?>
+            <a href="mailto:<?= e($seo['email']) ?>" title="Email"><i class="fas fa-envelope"></i></a>
+          <?php endif; ?>
+        </div>
       </div>
-      <div class="footer-copy">&copy; <?= date('Y') ?> <?= e($seo['author']) ?>. All rights reserved.</div>
     </div>
   </footer>
 
