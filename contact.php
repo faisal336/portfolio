@@ -45,6 +45,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Send email
     if (mail($to, $subject, $email_content, $headers)) {
         $_SESSION['last_contact'] = $now;
+
+        // Save query to portfolio.json
+        $dataFile = __DIR__ . '/data/portfolio.json';
+        if (file_exists($dataFile)) {
+            $pData = json_decode(file_get_contents($dataFile), true) ?: [];
+            if (!isset($pData['queries'])) $pData['queries'] = [];
+            $pData['queries'][] = [
+                'name'    => $name,
+                'email'   => $email,
+                'message' => $message,
+                'date'    => date('Y-m-d H:i:s')
+            ];
+            file_put_contents($dataFile, json_encode($pData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        }
+
         echo "<script>alert('Message sent successfully!'); window.history.back();</script>";
     } else {
         echo "<script>alert('Failed to send message. Please try again later.'); window.history.back();</script>";

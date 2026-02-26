@@ -123,6 +123,12 @@ switch ($action) {
         echo json_encode(['ok' => true, 'data' => $data]);
         break;
 
+    case 'clear_queries':
+        $data['queries'] = [];
+        save_data($data);
+        echo json_encode(['ok' => true, 'data' => $data]);
+        break;
+
     default:
         echo json_encode(['ok' => false, 'error' => 'Unknown action']);
 }

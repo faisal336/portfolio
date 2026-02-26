@@ -178,6 +178,7 @@ $data = load_data();
         <a href="#" data-tab="about"><i class="fas fa-user"></i> About Cards</a>
         <a href="#" data-tab="stats"><i class="fas fa-chart-bar"></i> Stats</a>
         <a href="#" data-tab="seo"><i class="fas fa-search"></i> SEO</a>
+        <a href="#" data-tab="queries"><i class="fas fa-envelope"></i> Queries</a>
         <a href="index.php" target="_blank"><i class="fas fa-external-link-alt"></i> View Site</a>
       </div>
       <div class="sidebar-footer">
@@ -203,6 +204,7 @@ $data = load_data();
         <button class="tab" data-tab="about"><i class="fas fa-user"></i> About</button>
         <button class="tab" data-tab="stats"><i class="fas fa-chart-bar"></i> Stats</button>
         <button class="tab" data-tab="seo"><i class="fas fa-search"></i> SEO</button>
+        <button class="tab" data-tab="queries"><i class="fas fa-envelope"></i> Queries</button>
       </div>
 
       <!-- ═══ PROFILE PANEL ═══ -->
@@ -521,6 +523,19 @@ $data = load_data();
               <input id="seo-linkedin_url" placeholder="https://linkedin.com/in/your-profile" />
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ QUERIES PANEL ═══ -->
+      <div class="panel" id="panel-queries">
+        <div class="data-card">
+          <div class="data-header">
+            <h3><i class="fas fa-envelope"></i> Contact Queries <span id="queries-count" style="font-size:13px;font-weight:500;color:var(--muted);margin-left:8px;"></span></h3>
+            <button class="btn btn-danger" onclick="clearQueries()"><i class="fas fa-trash"></i> Clear All</button>
+          </div>
+          <div style="padding:24px;">
+            <pre id="queries-json" style="background:rgba(0,0,0,0.25);border:1px solid var(--border);border-radius:10px;padding:20px;overflow-x:auto;font-size:13px;line-height:1.7;color:var(--text);white-space:pre-wrap;word-break:break-word;min-height:80px;"></pre>
           </div>
         </div>
       </div>
@@ -921,10 +936,31 @@ $data = load_data();
       else showToast(res.error || 'Error', 'error');
     }
 
+    // ─── QUERIES ───
+    function renderQueries() {
+      const queries = data.queries || [];
+      const pre = document.getElementById('queries-json');
+      const badge = document.getElementById('queries-count');
+      badge.textContent = queries.length ? `(${queries.length})` : '';
+      if (queries.length === 0) {
+        pre.innerHTML = '<span style="color:var(--muted);font-style:italic;">No queries yet.</span>';
+        return;
+      }
+      pre.textContent = JSON.stringify(queries, null, 2);
+    }
+
+    async function clearQueries() {
+      if (!confirm('Delete all queries? This cannot be undone.')) return;
+      const res = await api('clear_queries');
+      if (res.ok) { data = res.data; renderQueries(); showToast('All queries cleared!'); }
+      else showToast(res.error || 'Error', 'error');
+    }
+
     // ─── INIT ───
     render();
     renderProfile();
     renderSeo();
+    renderQueries();
 
     // Close modal on overlay click
     document.querySelectorAll('.modal-overlay').forEach(o => {
